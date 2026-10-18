@@ -60,3 +60,5 @@ document.addEventListener("DOMContentLoaded",function(){
  var ff=$("#faqfilter");if(ff){ff.addEventListener("input",function(){var v=ff.value.toLowerCase();document.querySelectorAll(".faq details").forEach(function(d){var m=d.textContent.toLowerCase().indexOf(v)>-1;d.style.display=m?"":"none";if(v&&m)d.open=true})})}
  var ex=$("#expandall");if(ex)ex.onclick=function(){var ds=document.querySelectorAll(".faq details"),o=![].some.call(ds,function(d){return d.open});ds.forEach(function(d){d.open=o});ex.textContent=o?"Collapse all":"Expand all"};
 });})();
+/* open a division-rules accordion when linked by #anchor */
+(function(){function o(){var h=location.hash.slice(1);if(!h)return;var d=document.getElementById(h);if(d&&d.tagName==="DETAILS"){d.open=true;d.scrollIntoView()}}window.addEventListener("hashchange",o);document.addEventListener("DOMContentLoaded",o)})();

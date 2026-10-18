@@ -256,3 +256,4 @@ table.slots th[scope=row]{text-align:left}
 @media(max-width:640px){table.slots th,table.slots td{padding:8px 6px;font-size:.78rem}}
 .fs li .pill{white-space:nowrap;flex:0 0 auto}.fs li>span:first-child{min-width:0}
 @media(max-width:640px){table.slots{font-size:.72rem}table.slots th,table.slots td{padding:7px 4px;letter-spacing:0}}
+.divrules ul{margin:12px 0 4px;padding-left:20px}.divrules li{margin-bottom:8px}
