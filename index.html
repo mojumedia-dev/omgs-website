@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="img/atv.css">
 <style>
 :root{--ink:#0E0915;--ink-2:#17101F;--purple:#3C1D6C;--purple-800:#2C1452;--purple-600:#5B3A94;--teal:#4ECDC4;--teal-dk:#0F6660;--silver:#BAC0C2;--silver-lt:#E6E8EA;--on-dark:#DCD5E8}
 *{box-sizing:border-box}html,body{margin:0;overflow-x:hidden}
@@ -53,11 +54,10 @@ h1 .accent{color:var(--teal);display:block}
 .chalk{fill:none;stroke:#fff;stroke-width:4;stroke-linecap:round;stroke-dasharray:1000;stroke-dashoffset:1000;animation:draw 2.4s ease-out forwards}
 .chalk.d2{animation-delay:.6s}.chalk.d3{animation-delay:1.2s}
 @keyframes draw{to{stroke-dashoffset:0}}
-.drag{animation:drag 7s ease-in-out infinite alternate}
-@keyframes drag{from{transform:translate(-60px,0)}to{transform:translate(60px,0)}}
 .score{position:absolute;left:50%;top:6%;transform:translateX(-50%);background:var(--ink);border:3px solid var(--silver);border-radius:8px;padding:8px 14px;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,.4);white-space:nowrap}
 .score small{display:block;font:800 .6rem/1 Inter,sans-serif;letter-spacing:.24em;color:var(--silver)}
 .score strong{display:block;font:400 clamp(1rem,3vw,1.35rem)/1.1 Anton,Impact,sans-serif;letter-spacing:.08em;color:var(--teal);margin-top:4px}
+.field .atv-track{--atv-w:clamp(170px,40vw,240px);margin-top:14px}
 .crew{text-align:center;color:var(--on-dark);font-style:italic;margin:14px 0 0;font-size:.95rem}
 footer{text-align:center;padding:18px 20px;font-size:.85rem;color:var(--silver);background:var(--ink)}
 @media (max-width:860px){main{grid-template-columns:1fr;gap:28px;padding-top:28px}.field{max-width:400px}.logo{width:110px}}
@@ -88,7 +88,7 @@ footer{text-align:center;padding:18px 20px;font-size:.85rem;color:var(--silver);
     <p class="small">Recreational girls softball for ages 3 to 18 · Riverton, Utah</p>
   </div>
   <figure class="field" style="margin:0">
-    <svg viewBox="0 0 500 500" role="img" aria-label="Illustration of a softball infield being renovated, with fresh chalk lines and a drag mat">
+    <svg viewBox="0 0 500 500" role="img" aria-label="Illustration of a softball infield being renovated, with fresh chalk lines">
       <defs>
         <pattern id="grass" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#2f7a3a"/><rect width="20" height="40" fill="#348540"/></pattern>
         <pattern id="dirt" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#b9774a"/><circle cx="2" cy="3" r=".9" fill="#a3663d"/><circle cx="6" cy="6" r=".7" fill="#cf8c5c"/></pattern>
@@ -104,11 +104,29 @@ footer{text-align:center;padding:18px 20px;font-size:.85rem;color:var(--silver);
         <path class="chalk d2" d="M250 460 L150 360 L250 260 L350 360 Z" transform="translate(0 -60)"/>
         <path class="chalk d3" d="M232 384 h-16 v28 h16 M268 384 h16 v28 h-16"/>
         <g fill="#fff"><rect x="141" y="291" width="16" height="16" transform="rotate(45 149 299)"/><rect x="242" y="192" width="16" height="16" transform="rotate(45 250 200)"/><rect x="342" y="291" width="16" height="16" transform="rotate(45 350 299)"/><path d="M240 392h20v8l-10 8-10-8z"/></g>
-        <g class="drag"><g transform="translate(215 230)"><rect x="0" y="0" width="70" height="26" rx="3" fill="#5b4a3a" stroke="#2a211a" stroke-width="2"/><path d="M0 9h70M0 17h70M12 0v26M24 0v26M36 0v26M48 0v26M60 0v26" stroke="#2a211a" stroke-width="1.2"/><path d="M35 0 L35 -30" stroke="#BAC0C2" stroke-width="3"/></g></g>
         <g transform="translate(380 410)"><path d="M0 50 L20 0 L40 50 Z" fill="#4ECDC4" stroke="#0E0915" stroke-width="2"/><rect x="8" y="22" width="24" height="6" fill="#0E0915"/><rect x="-4" y="48" width="48" height="6" fill="#0E0915"/></g>
         <g transform="translate(70 410)"><path d="M0 50 L20 0 L40 50 Z" fill="#4ECDC4" stroke="#0E0915" stroke-width="2"/><rect x="8" y="22" width="24" height="6" fill="#0E0915"/><rect x="-4" y="48" width="48" height="6" fill="#0E0915"/></g>
       </g>
     </svg>
+<div class="atv-track" role="img" aria-label="ATV pulling a drag mat across the infield">
+      <div class="atv-rig"><div class="atv-trail"></div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 150" aria-hidden="true" focusable="false">
+    <g class="atv-mat"><path d="M8 130h104l4 12H4z" fill="#5b4a3a" stroke="#2a211a" stroke-width="2" stroke-linejoin="round"/><path d="M6 136h108M20 130l-2 12M34 130l-2 12M48 130l-1 12M62 130v12M76 130l1 12M90 130l2 12M104 130l2 12" stroke="#2a211a" stroke-width="1.3"/></g>
+    <path d="M112 131L152 112M112 137L152 116" stroke="#BAC0C2" stroke-width="2.4" stroke-dasharray="4 2" fill="none"/>
+    <g class="atv-body" stroke="#0E0915" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M150 110h22M146 104h10v12h-10z" fill="#BAC0C2"/>
+    <path d="M150 88h70l14-12h44l22 10h22l4 14-26 6H158z" fill="#4ECDC4"/>
+    <path d="M146 92c2-22 24-30 46-28 22 2 34 14 36 30M290 94c2-20 22-28 42-26 18 2 30 12 32 26" fill="none" stroke-width="9"/>
+    <path d="M146 92c2-22 24-30 46-28 22 2 34 14 36 30M290 94c2-20 22-28 42-26 18 2 30 12 32 26" fill="none" stroke="#4ECDC4" stroke-width="4"/>
+    <path d="M200 76c0-10 10-14 26-14h40c8 0 10 4 8 10l-4 6h-70z" fill="#17101F"/>
+    <path d="M150 62h44M156 62v20M186 62v20" fill="none" stroke="#BAC0C2" stroke-width="4"/>
+    <path d="M286 78l14-30M290 46h22" fill="none" stroke-width="5"/>
+    <path d="M352 84l14-4" fill="none" stroke="#E6E8EA" stroke-width="6"/>
+    <path d="M230 106h50l-8 16h-34z" fill="#2C1452"/>
+    </g>
+    <g class="atv-wheel" style="transform-origin:185px 112px"><circle cx="185" cy="112" r="30" fill="#0E0915"/><circle cx="185" cy="112" r="30" fill="none" stroke="#2a2433" stroke-width="5" stroke-dasharray="6 5"/><circle cx="185" cy="112" r="14" fill="#BAC0C2"/><path d="M185 100v24M173 112h24" stroke="#0E0915" stroke-width="3"/><circle cx="185" cy="112" r="4" fill="#0E0915"/></g>
+    <g class="atv-wheel" style="transform-origin:330px 112px"><circle cx="330" cy="112" r="30" fill="#0E0915"/><circle cx="330" cy="112" r="30" fill="none" stroke="#2a2433" stroke-width="5" stroke-dasharray="6 5"/><circle cx="330" cy="112" r="14" fill="#BAC0C2"/><path d="M330 100v24M318 112h24" stroke="#0E0915" stroke-width="3"/><circle cx="330" cy="112" r="4" fill="#0E0915"/></g>
+    </svg></div>
+    </div>
     <div class="score" aria-hidden="true"><small>OMGS · SCOREBOARD</small><strong>NEW SITE: COMING SOON</strong></div>
     <figcaption class="crew">Grounds crew at work. Please stay off the infield.</figcaption>
   </figure>
