@@ -14,5 +14,5 @@ const OMGS_STATS = [
   { num: "40+", label: "Teams per season" },
   { num: "3-18", label: "Ages" },
   { num: "10", label: "Games guaranteed each season" },
-  { num: "20+", label: "Cities across Salt Lake & Utah County" }
+  { num: "20+", label: "Cities across Salt Lake & Utah Counties" }
 ];
