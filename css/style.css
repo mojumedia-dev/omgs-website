@@ -280,3 +280,4 @@ table.slots th[scope=row]{text-align:left}
 .plg-teaser-in{display:flex;gap:36px;align-items:center}.plg-teaser img{background:#fff;border-radius:50%;padding:14px;flex:none}
 @media (max-width:900px){.plg-hero-in{grid-template-columns:minmax(0,1fr)}.plg-mark{width:170px;order:-1}.plg-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.plg-cards,.plg-three{grid-template-columns:minmax(0,1fr)}.plg-teaser-in{flex-direction:column;align-items:flex-start}.plg-teaser img{width:110px;height:110px}}
 @media (max-width:420px){.plg-letter{font-size:2.6rem}.plg-word{font-size:.9rem}.plg-tile{padding:16px 14px}}
+.plg-note{font-size:.88rem;font-style:italic;color:#5b5470;margin:-4px 0 6px}
