@@ -35,7 +35,7 @@ Fill these in as they are decided, then remove them from this list.
 
 **Links / sign-ups**
 - Coach application link (handbook says applications are online).
-- Snack Shack volunteer sign-up, Umpire crew info/sign-up.
+- Umpire crew info/sign-up.
 - Where game schedules are posted; standings link.
 - Sponsorship levels and sponsor contact (button emails contact@ for now).
 
