@@ -92,7 +92,7 @@ main section,section.band{padding:88px 0}.page-head{background:var(--ink);color:
 .date-row{display:grid;grid-template-columns:66px 1fr auto;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--bone-line)}
 .date-tile{background:var(--purple);color:#fff;text-align:center;padding:9px 0;border-radius:var(--r)}.date-tile .d{font:1.4rem/1 Anton,sans-serif}.date-tile .m{font-size:.6rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-top:3px}
 .ev-title{font-weight:700}.ev-sub{font-size:.82rem;color:var(--body)}.ev-tag{font-size:.66rem;font-weight:800;letter-spacing:.16em;color:var(--purple)}
-.sub-eyebrow{font-size:.7rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--silver-2);margin:14px 0 2px}
+.sub-eyebrow{font-size:.7rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#5f6468;margin:14px 0 2px}
 .card-foot{margin-top:auto;padding-top:20px;border-top:1px solid var(--bone-line)}.view-all{font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);text-decoration:none}.view-all:after{content:" →"}
 /* event list (dates page) */
 .evs{list-style:none;padding:0;margin:0 0 24px}.ev{display:grid;grid-template-columns:200px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--bone-line)}
@@ -287,3 +287,12 @@ table.slots th[scope=row]{text-align:left}
 @media (max-width:900px){.plg-mark{width:170px;height:170px}}
 .plg-teaser img{width:150px;height:150px;aspect-ratio:1/1;object-fit:contain;box-sizing:border-box}
 @media (max-width:900px){.plg-teaser img{width:110px;height:110px}}
+.fs-chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 20px}.fs-chips .chip{font:inherit;font-weight:700;padding:8px 14px;border-radius:999px;border:2px solid #1f2a30;background:#fff;color:#1f2a30;cursor:pointer;min-height:40px}.fs-chips .chip.is-on{background:#1f2a30;color:#fff}.fs-chips .chip:focus-visible{outline:3px solid #4ECDC4;outline-offset:2px}.fs-disclaimer{margin:20px 0}.fs-empty{text-align:center;margin-top:8px}
+/* QA 2026-10-18 */
+.cta-band p a:not(.btn){color:#fff;text-decoration:underline;text-underline-offset:2px}
+@media(max-width:1100px){.site-nav.open{overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding-bottom:calc(28px + env(safe-area-inset-bottom))}}
+.btn[disabled]{opacity:.6;cursor:not-allowed;filter:grayscale(.4)}
+.ft-h a{display:inline-block;padding:4px 0}
+@font-face{font-family:"Inter Fallback";src:local("Arial"),local("Helvetica"),local("Liberation Sans");size-adjust:107.12%;ascent-override:90.44%;descent-override:22.52%;line-gap-override:0%}
+body{font-family:Inter,"Inter Fallback",system-ui,-apple-system,"Segoe UI",sans-serif}
+.ft-legal a{color:inherit;text-decoration:underline;display:inline-block;padding:4px 0}

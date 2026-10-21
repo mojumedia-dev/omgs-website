@@ -20,7 +20,7 @@ const OMGS_DATES = {
       { date: "2026-03-07", title: "Skill assessments and drafts (mandatory)", details: "Rain, snow, or shine. Equipment bag check-out.", where: "Centennial Park, 13000 S 2700 W, Riverton, UT 84065" },
       { date: "2026-03-09", title: "Coaches meeting and clinic + Annual Meeting", details: "Mandatory for coaches. No children. Evening meeting.", where: "Scheels, 11400 S State St, Sandy, UT 84070" },
       { date: "2026-03-16", time: "18:00-21:00", title: "Parent meeting (mandatory for team parents, first-time parents, scorekeepers)", details: "No children." },
-      { date: "", label: "Spring (dates coming soon)", title: "Free pitching clinics", details: "Pre-register with kathy@omgsoftball.org" },
+      { date: "", label: "Spring (dates coming soon)", title: "Free pitching clinics", details: "Pre-register with Kathy Wilfert (Clinics & Equipment). Her contact is on the About & Board page." },
       { date: "2026-04-04", time: "09:00-12:00", title: "Centennial Park clean-up day", where: "Centennial Park, 13000 S 2700 W, Riverton, UT 84065" },
       { date: "2026-04-06", title: "Season begins" },
       { date: "2026-04-18", title: "All-Star coach requests due" },

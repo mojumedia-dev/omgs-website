@@ -26,8 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
     n.classList.toggle("open", o); t.setAttribute("aria-expanded", o ? "true" : "false");
     t.textContent = o ? "Close" : "Menu"; t.setAttribute("aria-label", o ? "Close menu" : "Open menu");
     document.documentElement.classList.toggle("menu-open", o);
+    fitMenu();
     if (o) { var f = n.querySelector("a,button"); if (f) f.focus(); } else if (focusToggle) t.focus();
   }
+  function fitMenu() { if (!n) return; if (!n.classList.contains("open")) { n.style.maxHeight = ""; return; } var top = Math.max(0, n.getBoundingClientRect().top); n.style.maxHeight = Math.max(160, window.innerHeight - top) + "px"; }
   function menuOpen() { return n && n.classList.contains("open") && getComputedStyle(t).display !== "none"; }
   if (t && n) {
     t.addEventListener("click", function () { setMenu(!n.classList.contains("open")); });
@@ -42,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
       }
     });
-    window.addEventListener("resize", function () { if (n.classList.contains("open") && getComputedStyle(t).display === "none") setMenu(false); });
+    window.addEventListener("resize", function () { fitMenu(); if (n.classList.contains("open") && getComputedStyle(t).display === "none") setMenu(false); });
   }
   // Desktop dropdowns: click / keyboard (hover is CSS)
   var btns = [].slice.call(document.querySelectorAll(".sub-toggle"));

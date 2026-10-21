@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded",function(){
  var A=window.OMGS_ANNOUNCEMENT,box=$("#announce");if(box)setTimeout(function(){box.classList.remove("pending")},0);
  if(box&&typeof OMGS_ANNOUNCEMENT!=="undefined"&&OMGS_ANNOUNCEMENT.enabled){A=OMGS_ANNOUNCEMENT;var k="omgs-dismiss-"+A.id;
   try{if(localStorage.getItem(k))A=null}catch(e){}
-  if(A){box.innerHTML='<div class="announce"><div class="wrap"><span>'+esc(A.text)+(A.linkUrl?' <a href="'+esc(A.linkUrl)+'">'+esc(A.linkText||"More")+'</a>':'')+'</span><button aria-label="Dismiss announcement">&times;</button></div></div>';
-   box.querySelector("button").onclick=function(){box.innerHTML="";box.classList.remove("pending");try{localStorage.setItem(k,1)}catch(e){}}}}
+  if(A&&!box.querySelector(".announce")){box.innerHTML='<div class="announce"><div class="wrap"><span>'+esc(A.text)+(A.linkUrl?' <a href="'+esc(A.linkUrl)+'">'+esc(A.linkText||"More")+'</a>':'')+'</span><button aria-label="Dismiss announcement">&times;</button></div></div>';
+  }if(A&&box.querySelector("button")){box.querySelector("button").onclick=function(){box.innerHTML="";box.classList.remove("pending");try{localStorage.setItem(k,1)}catch(e){}}}}
  // Field status
  document.querySelectorAll("[data-field-status]").forEach(function(el){if(typeof OMGS_FIELD_STATUS==="undefined")return;var F=OMGS_FIELD_STATUS;
   el.innerHTML='<p class="updated">Updated: '+(F.updated?'<strong>'+esc(F.updated)+'</strong>':'<span class="soon">Coming soon for the 2027 season</span>')+'</p>'+(F.note?'<p class="note">'+esc(F.note)+'</p>':'')+
