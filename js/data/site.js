@@ -1,7 +1,7 @@
 /* ANNOUNCEMENT BANNER. Set enabled:false to hide. Change "id" whenever you change the
    message so people who dismissed the old one will see the new one. */
 const OMGS_ANNOUNCEMENT = {
-  enabled: true,
+  enabled: false,
   id: "2027-spring-reg-1",
   text: "Spring 2027 registration usually opens in mid-January. Exact date coming soon.",
   linkText: "Important dates",
