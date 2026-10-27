@@ -12,7 +12,6 @@ const OMGS_FIELD_STATUS = {
     { name: "Grass Bowl: Northwest Corner", status: "Pending" },
     { name: "Grass Bowl: Southwest Corner", status: "Pending" },
     { name: "Grass Bowl: Southeast Corner", status: "Pending" },
-    { name: "Tuscany East", status: "Pending" },
-    { name: "Western Springs", status: "Pending" }
+    { name: "Tuscany East", status: "Pending" }
   ]
 };
