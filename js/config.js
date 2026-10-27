@@ -7,7 +7,13 @@ const OMGS_CONFIG = {
   LOGIN_URL: "https://app.playmetrics.com/signup?clubToken=TG9naW4tQ2x1Yi52MS00MDM2LTE3OTgzMTY0NzF8SndCcS80SldRNVRwQzlHSU1Sc1NGUitYaUJCdEg1V09BZ1lPTVRtaGZDRT0=",
   // PRACTICE_SIGNUP_URL: leave "" to hide the button. The sheet lists coach names, so only
   // set this to a page that is safe to share publicly.
-  PRACTICE_SIGNUP_URL: ""
+  PRACTICE_SIGNUP_URL: "",
+  // EQUIPMENT HIGHLIGHT (homepage callout linking to equipment.html during registration season).
+  // "auto" = show only during the month window below; true = always show; false = never show.
+  SHOW_EQUIPMENT_HIGHLIGHT: "auto",
+  // Months are 1-12. Window can wrap the new year (Nov=11 through Feb=2 covers spring reg season).
+  EQUIPMENT_HIGHLIGHT_START_MONTH: 11,
+  EQUIPMENT_HIGHLIGHT_END_MONTH: 2
 };
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("a.js-register").forEach(function (a) {
@@ -19,6 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
   if (OMGS_CONFIG.PRACTICE_SIGNUP_URL) document.querySelectorAll(".js-practice-signup").forEach(function (p) {
     var a = p.querySelector("a"); if (a) a.href = OMGS_CONFIG.PRACTICE_SIGNUP_URL; p.hidden = false;
   });
+  (function () {
+    var el = document.getElementById("equipHighlight"); if (!el) return;
+    var f = OMGS_CONFIG.SHOW_EQUIPMENT_HIGHLIGHT, on = f === true;
+    if (f === "auto") { var m = new Date().getMonth() + 1, s = OMGS_CONFIG.EQUIPMENT_HIGHLIGHT_START_MONTH, e = OMGS_CONFIG.EQUIPMENT_HIGHLIGHT_END_MONTH;
+      on = s <= e ? (m >= s && m <= e) : (m >= s || m <= e); }
+    el.hidden = !on;
+  })();
   // Mobile menu: scroll lock, Close label, Escape, focus trap
   var t = document.querySelector(".nav-toggle"), n = document.querySelector(".site-nav"), H = document.querySelector(".site-header");
   function setMenu(o, focusToggle) {
