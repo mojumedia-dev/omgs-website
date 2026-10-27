@@ -3,8 +3,8 @@
    LOGIN_URL: every "Log In" link points here.
    Moving to PlayMetrics? Paste the new URLs below and you're done. */
 const OMGS_CONFIG = {
-  REGISTRATION_URL: "https://tshq.bluesombrero.com/Default.aspx?tabid=1903176",
-  LOGIN_URL: "https://tshq.bluesombrero.com/Default.aspx?tabid=1903176&isLogin=True",
+  REGISTRATION_URL: "https://app.playmetrics.com/signup?clubToken=TG9naW4tQ2x1Yi52MS00MDM2LTE3OTgzMTY0NzF8SndCcS80SldRNVRwQzlHSU1Sc1NGUitYaUJCdEg1V09BZ1lPTVRtaGZDRT0=",
+  LOGIN_URL: "https://app.playmetrics.com/signup?clubToken=TG9naW4tQ2x1Yi52MS00MDM2LTE3OTgzMTY0NzF8SndCcS80SldRNVRwQzlHSU1Sc1NGUitYaUJCdEg1V09BZ1lPTVRtaGZDRT0=",
   // PRACTICE_SIGNUP_URL: leave "" to hide the button. The sheet lists coach names, so only
   // set this to a page that is safe to share publicly.
   PRACTICE_SIGNUP_URL: ""
